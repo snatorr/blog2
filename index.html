@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div id="musicplayer">
+            <table class="controls">
+                <tr>
+                    <td>
+                        <div class="prev-track" onclick="prevTrack()"><img class="ctrlimg" src='https://file.garden/Zztv0a9yEhr5pmEq/back.png'></div>
+                    </td>
+                    <td>
+                        <div class="playpause-track" onclick="playpauseTrack()" ><img class="ctrlimg" src='https://file.garden/Zztv0a9yEhr5pmEq/play.png'></div>
+                    </td>
+                    <td>
+                        <div class="next-track" onclick="nextTrack()"><img class="ctrlimg" src='https://file.garden/Zztv0a9yEhr5pmEq/next.png'></div>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <marquee scrollamount="8" class="songtitle"></marquee>
+            </div>
+            <div class="seeking">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">0:00</div>
+            </div>
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="0" max="20" value="10" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+            <audio id="music" src=""></audio> 
+        </div>
+    </header>
+
+
+
+    <script src="scripts/mp3.js"></script>
+</body>
+</html>
